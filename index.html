@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marmitaria Fit House - Sua Alimentação Saudável!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Definindo as variáveis de cor personalizadas do Tailwind via CSS */
+        :root {
+            --color-primary-500: #00BFA5; /* Teal/Aqua vibrante */
+            --color-primary-600: #00A38D; /* Teal/Aqua mais escuro para hover */
+            --color-accent-400: #FFD700; /* Amarelo Dourado para destaque */
+            --color-accent-500: #E6C200; /* Amarelo Dourado mais escuro */
+            --color-secondary-400: #9575CD; /* Roxo Lavanda Suave para detalhes */
+            --color-neutral-dark: #333333; /* Texto principal */
+            --color-neutral-light: #F9F9F9; /* Fundo leve */
+        }
+
+        /* Classes Tailwind personalizadas usando as variáveis */
+        .bg-primary { background-color: var(--color-primary-500); }
+        .bg-primary-dark { background-color: var(--color-primary-600); }
+        .text-primary { color: var(--color-primary-500); }
+        .border-primary { border-color: var(--color-primary-500); }
+
+        .bg-accent { background-color: var(--color-accent-400); }
+        .bg-accent-dark { background-color: var(--color-accent-500); }
+        .text-accent { color: var(--color-accent-400); }
+
+        .bg-secondary { background-color: var(--color-secondary-400); }
+        .text-secondary { color: var(--color-secondary-400); }
+
+        .text-neutral-dark { color: var(--color-neutral-dark); }
+        .bg-neutral-light { background-color: var(--color-neutral-light); }
+
+        /* Fontes */
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+        body { font-family: 'Montserrat', sans-serif; }
+
+        /* Estilos para Transições e Efeitos */
+        .btn-effect { transition: all 0.3s ease; }
+        .btn-effect:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .card-effect { transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; }
+        .card-effect:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        /* Estilo para ícones de listas */
+        .list-check li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+        .list-check li svg {
+            flex-shrink: 0;
+            margin-right: 0.5rem;
+            margin-top: 0.2rem; /* Alinhamento com texto */
+        }
+    </style>
+</head>
+<body class="bg-neutral-light text-neutral-dark">
+
+    <header class="bg-white shadow-md py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-3xl font-extrabold text-primary">Fit House</div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-neutral-dark hover:text-primary font-medium">Início</a>
+                <a href="#planos" class="text-neutral-dark hover:text-primary font-medium">Planos</a>
+                <a href="#como-funciona" class="text-neutral-dark hover:text-primary font-medium">Como Funciona</a>
+                <a href="#depoimentos" class="text-neutral-dark hover:text-primary font-medium">Depoimentos</a>
+                <a href="#contato" class="text-neutral-dark hover:text-primary font-medium">Contato</a>
+            </nav>
+            <button class="md:hidden text-neutral-dark focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="relative bg-gradient-to-br from-primary to-green-300 text-white py-20 md:py-32 flex items-center justify-center min-h-[500px] overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.pexels.com/photos/10313093/pexels-photo-10313093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></div>
+        <div class="relative z-10 text-center max-w-4xl px-6">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">Sua Vida Saudável Começa Aqui!</h1>
+            <p class="text-xl md:text-2xl font-light mb-8 opacity-90">Marmitas fitness e planos semanais com ingredientes frescos e sabor irresistível. Comer bem nunca foi tão fácil!</p>
+            <a href="#planos" class="bg-accent text-neutral-dark px-10 py-4 rounded-full text-lg font-bold uppercase btn-effect hover:bg-accent-dark shadow-lg">
+                Ver Nossos Planos
+            </a>
+        </div>
+    </section>
+
+    <section id="proposta-valor" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6 text-primary">A Marmitaria Fit House te Ajuda a Viver Melhor!</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">Oferecemos praticidade, sabor e nutrição para o seu dia a dia. Conheça nossos diferenciais:</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-neutral-light rounded-xl shadow-md card-effect">
+                    <img src="./src/img/ingredientes.jpg" alt="Ingredientes Frescos" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-3 text-neutral-dark">Ingredientes Frescos</h3>
+                    <p class="text-gray-600">Priorizamos produtos de qualidade, selecionados diariamente para a sua refeição.</p>
+                </div>
+                <div class="p-6 bg-neutral-light rounded-xl shadow-md card-effect">
+                    <img src="./src/img/nutricao_balanceada.jpg" alt="Nutrição Balanceada" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-3 text-neutral-dark">Nutrição Balanceada</h3>
+                    <p class="text-gray-600">Cardápio elaborado por nutricionistas, ideal para seus objetivos.</p>
+                </div>
+                <div class="p-6 bg-neutral-light rounded-xl shadow-md card-effect">
+                    <img src="./src/img/sabor_incrivel.png" alt="Sabor Incrível" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-semibold mb-3 text-neutral-dark">Sabor Incrível</h3>
+                    <p class="text-gray-600">Refeições deliciosas que provam que comer saudável pode ser muito prazeroso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="py-16 bg-gradient-to-br from-green-50 to-neutral-light">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-primary">Como Funciona? Simples e Rápido!</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md card-effect">
+                    <div class="bg-secondary p-4 rounded-full mb-4 shadow-lg">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.065 1.704 5.922 4.381 7.42A12.001 12.001 0 0012 21.056c3.273 0 6.313-1.42 8.358-3.836C21.378 14.654 22 12 22 12s-1.704-5.922-4.382-7.42z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-neutral-dark">1. Escolha seu Plano</h3>
+                    <p class="text-gray-600">Selecione o plano semanal que melhor se adapta aos seus objetivos e rotina.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md card-effect">
+                    <div class="bg-primary p-4 rounded-full mb-4 shadow-lg">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.592-1M12 20c-3.414 0-6.58-1.554-8.595-4.114A2 2 0 012 13.052V7.5a2.5 2.5 0 012.5-2.5h15A2.5 2.5 0 0122 7.5v5.552a2 2 0 01-.405 1.834C18.58 18.446 15.414 20 12 20z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-neutral-dark">2. Receba em Casa</h3>
+                    <p class="text-gray-600">Suas marmitas fresquinhas e prontas para aquecer chegam no conforto da sua casa.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md card-effect">
+                    <div class="bg-accent p-4 rounded-full mb-4 shadow-lg">
+                        <svg class="w-10 h-10 text-neutral-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2 2m-2-2v4m5-4l2 2m-2-2v4M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2M12 20c-3.414 0-6.58-1.554-8.595-4.114A2 2 0 012 13.052V7.5a2.5 2.5 0 012.5-2.5h15A2.5 2.5 0 0122 7.5v5.552a2 2 0 01-.405 1.834C18.58 18.446 15.414 20 12 20z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-neutral-dark">3. Desfrute e Repita</h3>
+                    <p class="text-gray-600">Desfrute de refeições deliciosas e nutritivas, sem perder tempo na cozinha.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-primary">Conheça Nossos Planos de Marmitas Fit</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-neutral-light rounded-xl shadow-lg p-8 card-effect border-b-4 border-primary">
+                    <h3 class="text-3xl font-bold mb-3 text-primary">Plano Essencial</h3>
+                    <p class="text-5xl font-extrabold text-accent mb-6">R$ 1159<span class="text-2xl text-neutral-dark">/semana</span></p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6 list-check">
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>5 Refeições balanceadas</li>
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Entrega semanal inclusa</li>
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Opções variadas a cada semana</li>
+                    </ul>
+                    <a href="https://wa.me/+5511995481647?text=Olá! Gostaria de saber mais sobre o Plano Essencial da Marmitaria Fit House." target="_blank" class="bg-primary text-white px-8 py-3 rounded-full font-bold btn-effect hover:bg-primary-dark w-full inline-block shadow-md">Falar com Consultor</a>
+                </div>
+
+                <div class="bg-neutral-light rounded-xl shadow-lg p-8 card-effect border-b-4 border-accent relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-neutral-dark text-sm font-bold py-1 px-4 rounded-full shadow-md uppercase">MAIS POPULAR</span>
+                    <h3 class="text-3xl font-bold mb-3 text-primary">Plano Performance</h3>
+                    <p class="text-5xl font-extrabold text-accent mb-6">R$ 1299<span class="text-2xl text-neutral-dark">/semana</span></p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6 list-check">
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>10 Refeições personalizadas</li>
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Opções low-carb, high-protein</li>
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Prioridade nas novidades do chef</li>
+                    </ul>
+                    <a href="https://wa.me/+5511995481647?text=Olá! Tenho interesse no Plano Performance da Marmitaria Fit House." target="_blank" class="bg-primary text-white px-8 py-3 rounded-full font-bold btn-effect hover:bg-primary-dark w-full inline-block shadow-md">Falar com Consultor</a>
+                </div>
+
+                <div class="bg-neutral-light rounded-xl shadow-lg p-8 card-effect border-b-4 border-secondary">
+                    <h3 class="text-3xl font-bold mb-3 text-primary">Plano Família Fit</h3>
+                    <p class="text-5xl font-extrabold text-accent mb-6">R$ 1449<span class="text-2xl text-neutral-dark">/semana</span></p>
+                    <ul class="text-left text-gray-700 space-y-2 mb-6 list-check">
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>20 Refeições adaptáveis</li>
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Ideal para 2-3 pessoas</li>
+                        <li><svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Consultoria de adaptação de plano</li>
+                    </ul>
+                    <a href="https://wa.me/+5511995481647?text=Olá! Gostaria de saber mais sobre o Plano Família Fit da Marmitaria Fit House." target="_blank" class="bg-primary text-white px-8 py-3 rounded-full font-bold btn-effect hover:bg-primary-dark w-full inline-block shadow-md">Falar com Consultor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-primary">O Que Nossos Clientes Dizem</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-neutral-light rounded-xl shadow-md p-6 card-effect text-left">
+                    <p class="text-lg text-gray-700 italic mb-4">"A Fit House mudou minha rotina! Marmitas deliciosas, saudáveis e a entrega é sempre pontual. Recomendo muito!"</p>
+                    <div class="flex items-center">
+                        <img src="./src/img/ana_paula.webp" alt="Foto do Cliente 1" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-semibold text-neutral-dark">Ana Paula, 32 anos</p>
+                            <div class="flex text-accent text-sm">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-neutral-light rounded-xl shadow-md p-6 card-effect text-left">             
+                    <p class="text-lg text-gray-700 italic mb-4">"Perfeito para quem tem uma vida corrida. As opções são variadas e o sabor é surpreendente. Minha saúde agradece!"</p>
+                    <div class="flex items-center">
+                        <img src="./src/img/ricardo.webp" alt="Foto do Cliente 2" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-semibold text-neutral-dark">Ricardo Silva, 45 anos</p>
+                            <div class="flex text-accent text-sm">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-6">Pronto para Mudar Sua Alimentação?</h2>
+            <p class="text-xl mb-8 opacity-90">Clique no botão abaixo e fale com um de nossos consultores para escolher o plano ideal para você!</p>
+            <a href="https://wa.me/+5511995481647?text=Olá! Gostaria de conversar sobre os planos da Marmitaria Fit House." target="_blank" class="bg-accent text-neutral-dark px-10 py-4 rounded-full text-lg font-bold uppercase btn-effect hover:bg-accent-dark shadow-lg">
+                Fale Conosco no WhatsApp!
+            </a>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-neutral-dark text-white py-10 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="mb-4 text-gray-400">&copy; 2025 Marmitaria Fit House. Todos os direitos reservados. ao Criador.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.instagram.com/kaique.rocha1805/" class="text-gray-400 hover:text-white transition-colors" target="_blank">Instagram</a>
+                <a href="https://github.com/Kaique-Rocha" class="text-gray-400 hover:text-white transition-colors" target="_blank">GitHub</a>
+                <a href="https://wa.me/+5511995481647?text=Olá! Estava verificando o seu site e possuo interesse em ver seus preços." target="_blank" class="text-gray-400 hover:text-white transition-colors">WhatsApp</a>
+            </div>
+            <p class="mt-6 text-sm text-gray-400">Transformando vidas através da alimentação saudável.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
